@@ -11,8 +11,7 @@ class ApiLensOverlay extends StatefulWidget {
     super.key,
     required this.child,
     this.config,
-        this.navigatorKey,
-
+    this.navigatorKey,
   });
 
   @override
@@ -90,6 +89,13 @@ class _ApiLensOverlayState extends State<ApiLensOverlay> {
             if (_isHidden) {
               setState(() => _isHidden = false);
             } else {
+              if (widget.navigatorKey != null) {
+                widget.navigatorKey?.currentState?.push(
+                  MaterialPageRoute(
+                      builder: (context) => const ApiLogsScreen()),
+                );
+                return;
+              }
               _navigatorKey.currentState?.push(
                 MaterialPageRoute(builder: (context) => const ApiLogsScreen()),
               );
