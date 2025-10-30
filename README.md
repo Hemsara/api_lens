@@ -1,39 +1,85 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# API Lens 🔍
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A beautiful, developer-friendly API logger for Flutter with draggable overlay button, JSON syntax highlighting, and comprehensive request/response inspection.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+[![pub package](https://img.shields.io/pub/v/api_lens.svg)](https://pub.dev/packages/api_lens)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## ✨ Features
 
-## Features
+- 🎯 **Draggable Overlay Button** - Minimal, edge-snapping debug button
+- 🎨 **Beautiful UI** - Syntax-highlighted JSON, color-coded URLs
+- 📊 **Statistics Dashboard** - Success rates, response times, distributions
+- 🔍 **Advanced Filtering** - Filter by method, status, search queries
+- 💾 **SQLite Storage** - Persistent logs with auto-cleanup
+- 🚀 **Easy Integration** - 3 lines of code to get started
+- 📦 **Dio & HTTP Support** - Works with both popular clients
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
 
-## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## 🚀 Getting Started
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+### Installation
+```yaml
+dependencies:
+  api_lens: ^1.0.0
 ```
 
-## Additional information
+### Usage
+```dart
+import 'package:flutter/material.dart';
+import 'package:api_lens/api_lens.dart';
+import 'package:dio/dio.dart';
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+void main() {
+  // 1. Initialize
+  ApiLens.init(config: ApiLoggerConfig.debug);
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // 2. Wrap MaterialApp
+    return ApiLensOverlay(
+      child: MaterialApp(
+        home: HomePage(),
+      ),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // 3. Add interceptor to Dio
+    final dio = Dio()..interceptors.add(ApiLensDioInterceptor());
+    
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () => dio.get('https://api.example.com/users'),
+          child: Text('Make Request'),
+        ),
+      ),
+    );
+    // That's it! Button appears automatically 🎉
+  }
+}
+```
+
+## 📖 Documentation
+
+[Link to full documentation]
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our contributing guidelines.
+
+## 📄 License
+
+MIT License - see LICENSE file for details
+
+## 💬 Support
+
+- Issues: https://github.com/Hemsara/api_lens/issues
