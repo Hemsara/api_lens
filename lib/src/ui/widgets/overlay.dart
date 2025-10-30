@@ -5,11 +5,14 @@ import '../../../api_lens.dart';
 class ApiLensOverlay extends StatefulWidget {
   final Widget child;
   final ApiLoggerConfig? config;
+  final GlobalKey<NavigatorState>? navigatorKey;
 
   const ApiLensOverlay({
     super.key,
     required this.child,
     this.config,
+        this.navigatorKey,
+
   });
 
   @override
@@ -47,7 +50,7 @@ class _ApiLensOverlayState extends State<ApiLensOverlay> {
     if (child is MaterialApp) {
       return MaterialApp(
         key: child.key,
-        navigatorKey: _navigatorKey,
+        navigatorKey: widget.navigatorKey ?? _navigatorKey,
         home: child.home,
         title: child.title,
         theme: child.theme,
