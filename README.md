@@ -5,6 +5,13 @@ A beautiful, developer-friendly API logger for Flutter with draggable overlay bu
 [![pub package](https://img.shields.io/pub/v/api_lens.svg)](https://pub.dev/packages/api_lens)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+<p align="center">
+  <img src="https://res.cloudinary.com/dbnwetu3r/image/upload/v1761890091/IMG_1488_kk8egq.png" alt="Image 1" width="30%">
+  <img src="https://res.cloudinary.com/dbnwetu3r/image/upload/v1761890088/IMG_1489_poyxiv.png" alt="Image 2" width="30%">
+  <img src="https://res.cloudinary.com/dbnwetu3r/image/upload/v1761890088/IMG_1490_b4elol.png" alt="Image 3" width="30%">
+</p>
+
+
 ## ✨ Features
 
 - 🎯 **Draggable Overlay Button** - Minimal, edge-snapping debug button
@@ -68,9 +75,6 @@ class HomePage extends StatelessWidget {
 }
 ```
 
-## 📖 Documentation
-
-[Link to full documentation]
 
 ## 🤝 Contributing
 
