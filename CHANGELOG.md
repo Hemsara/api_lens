@@ -1,38 +1,12 @@
-## 1.0.3 - 2025-01-XX
+# [1.0.3] - 2025-10-31
 
-### Initial Release 🎉
+### ✨ Added
 
-#### Features
-* Draggable overlay button with hide/show functionality
-* Beautiful UI with Material Design
-* JSON syntax highlighting for requests/responses
-* Color-coded URL display (scheme, host, path, query)
-* SQLite persistent storage for logs
-* Dio interceptor support
-* HTTP client wrapper support
-* Statistics dashboard with:
-    - Total requests counter
-    - Average response duration
-    - Success rate percentage
-    - Status code distribution charts
-    - HTTP method distribution charts
-* Advanced filtering:
-    - Filter by HTTP method (GET, POST, PUT, DELETE, PATCH)
-    - Filter by status (SUCCESS, ERROR)
-    - Search by URL or method
-* Auto-cleanup old logs (configurable days)
-* Max logs limit enforcement (configurable)
-* Configurable button appearance (color, icon, size, position)
-* Export logs as JSON
-* Console logging option
-* Debug/Release/Minimal configuration presets
-
-#### Platform Support
-* ✅ Android
-* ✅ iOS
+* **ApiLens Initial Implementation** with new UI components for detailed API log inspection.
 
 
-#### Documentation
-* Complete README with examples
-* API documentation
-* Example app demonstrating all features
+### 💅 Improved
+
+* Enhanced overall **user experience** and **visual consistency** across all logging views.
+* Optimized **layout responsiveness** for better readability across screen sizes.
+
