@@ -1,8 +1,8 @@
 // api_lens.dart
 import 'package:flutter/foundation.dart';
 
-import '../services/api_logger_service.dart';
-import '../services/config.dart';
+import 'api_logger_service.dart';
+import 'config.dart';
 
 class ApiLens {
   static final ApiLens _instance = ApiLens._internal();

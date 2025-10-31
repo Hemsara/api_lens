@@ -1,6 +1,6 @@
 name: api_lens
 description: A beautiful, modern API logger and inspector for Flutter with syntax-highlighted JSON, URL parsing, and rich statistics. Debug your HTTP requests with style.
-version: 1.0.1
+version: 1.0.3
 homepage: https://github.com/Hemsara/api_lens
 repository: https://github.com/Hemsara/api_lens
 issue_tracker: https://github.com/Hemsara/api_lens/issues

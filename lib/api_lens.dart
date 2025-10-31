@@ -12,7 +12,7 @@ export 'src/models/api_log.dart';
 // Services
 export 'src/services/api_logger_service.dart';
 export 'src/services/config.dart';
+export 'src/services/wrapper.dart';
 // UI
 export 'src/ui/api_logs_screen.dart';
-export 'src/ui/widgets/overlay.dart';
-export 'src/ui/wrapper.dart';
+export 'src/ui/main/overlay.dart';
